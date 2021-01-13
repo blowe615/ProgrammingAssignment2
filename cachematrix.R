@@ -5,7 +5,24 @@
 ## set and get the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-
+    # Initialize the inverse matrix as NULL
+    xinv <- NULL
+    # Define the set matrix function
+    set <- function(y) {
+        # Initializes the matrix and inverse matrix if one is not passed
+        # when makeCacheMatrix is called
+        x <<- y
+        xinv <<- NULL
+    }
+    # Define the get matrix function
+    get <- function() x # Returns the matrix x
+    # Define the set inverse matrix function
+    setinv <- function(inv) xinv <<- inv # Assigns inverse matrix in cache
+    # Define the get inverse matrix function
+    getinv <- function() xinv # Returns the inverse matrix from cache
+    
+    # Return list of functions
+    list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
 

@@ -5,6 +5,12 @@
 ## set and get the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
+    ## Inputs
+    ## x: an invertible matrix, default is an empty matrix
+    ## Returns
+    ## List of 4 functions to set and get the original matrix 'x' and to 
+    ## set and get the inverse matrix of 'x'
+    
     # Initialize the inverse matrix as NULL
     xinv <- NULL
     # Define the set matrix function
@@ -30,6 +36,12 @@ makeCacheMatrix <- function(x = matrix()) {
 ## or retrieve the inverse from the cache if it has already been calculated
 
 cacheSolve <- function(x, ...) {
+    ## Inputs
+    ## x: list of functions returned from makeCacheMatrix
+    ## ...: additional arguments to pass to solve()
+    ## Returns
+    ## xinv: inverse matrix of 'x'
+    
     # Check if the inverse already exists
     xinv <- x$getinv()
     # If getinv() does not return NULL

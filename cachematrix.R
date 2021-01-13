@@ -1,14 +1,16 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Functions to cache and retrieve the inverse of a matrix so that 
+## repeated computations are not required
 
-## Write a short comment describing this function
+## Create a list of functions to set and get the matrix and
+## set and get the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
 
 }
 
 
-## Write a short comment describing this function
+## Calculate the inverse of matrix 'x' using the solve() function
+## or retrieve the inverse from the cache if it has already been calculated
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
